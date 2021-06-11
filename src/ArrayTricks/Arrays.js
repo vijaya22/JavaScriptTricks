@@ -42,4 +42,15 @@ console.log(`Are arrays equal ? ${ifArraysAreEqual1}`)
 let ifArraysAreEqual2 = compareArrays([1,2,4],[1,2,3])
 console.log(`Are arrays equal ? ${ifArraysAreEqual2}`)
 
+/**
+ * To reverse an array,
+ * use reverse function from Arrays library
+ * @param {string[]} stringArr
+ * @param {number[]} numArr
+ */
+function reverseArray(stringArr, numArr){
+    console.log(stringArr.reverse());
+    console.log(numArr.reverse());
+}
+let checkReverse = reverseArray(["i","am","sky"],[1,2,3,4,5]); 
 

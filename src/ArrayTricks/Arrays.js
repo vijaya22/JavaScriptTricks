@@ -42,3 +42,4 @@ console.log(`Are arrays equal ? ${ifArraysAreEqual1}`)
 let ifArraysAreEqual2 = compareArrays([1,2,4],[1,2,3])
 console.log(`Are arrays equal ? ${ifArraysAreEqual2}`)
 
+

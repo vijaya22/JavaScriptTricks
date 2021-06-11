@@ -1,8 +1,10 @@
 /* Arrays Tricks- */
 
 /**
- * Finding Maixmum in an array 
- * use Math.max(...array)
+ * Finding Maximum in an array 
+ * use Math.max(...array) to find maximum in an array.
+ * @param {number[]} numArray
+ * @return {number} 
  */
 function findMaxInArray(numArray){
     return Math.max(...numArray);

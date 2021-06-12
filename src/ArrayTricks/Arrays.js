@@ -54,3 +54,15 @@ function reverseArray(stringArr, numArr){
 }
 let checkReverse = reverseArray(["i","am","sky"],[1,2,3,4,5]); 
 
+/**
+ * Sort an array on the basis of length of its elements
+ * ex- sort a string array such that the shortest string is at index 0
+ * when it encounters two strings of same length, it chooses to follow the order in which they are inserted.
+ * @param {string[]} stringArr
+ * @return {string[]}
+ */
+function sortArrayOnLengthOfElements(stringArr){
+    return stringArr.sort((a,b)=>a.length-b.length)
+}
+let sortedArr = sortArrayOnLengthOfElements(["elephant","dog","abc","a","is"]);
+console.log('sortedArr:::',sortedArr);

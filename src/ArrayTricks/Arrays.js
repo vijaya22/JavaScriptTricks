@@ -66,3 +66,20 @@ function sortArrayOnLengthOfElements(stringArr){
 }
 let sortedArr = sortArrayOnLengthOfElements(["elephant","dog","abc","a","is"]);
 console.log('sortedArr:::',sortedArr);
+
+/**
+ * Sort a string array into lexicpgraphic order
+ * @param {string[]} wordArr 
+ * @return {string[]}
+ */
+function sortArrayLexicographically(wordArr){
+    return wordArr.sort((a,b)=>a.toLowerCase().localeCompare(b.toLowerCase()))
+}
+const lexicoGraphicallySortedWordArr = sortArrayLexicographically(["abc","aa","dog","zty","abaca"]);
+console.log("lexicographocally sorted word array: ",lexicoGraphicallySortedWordArr);
+
+function sortAlphanumericArrayLexicographically(alphaNumArr){
+    return alphaNumArr.sort((a,b)=>a.toLowerCase().localeCompare(b.toLowerCase(),'en',{numeric:true}));
+}
+const lexicoGraphicallySortedAlphanumericArr = sortAlphanumericArrayLexicographically(["a1","1a","b1","0b"]);
+console.log('lexicographocally sorted alphanumeric array:',lexicoGraphicallySortedAlphanumericArr);

@@ -6,10 +6,10 @@
  * @param {number[]} numArray
  * @return {number} 
  */
-function findMaxInArray(numArray){
+function findMaxInArray(numArray) {
     return Math.max(...numArray);
 }
-let maxOfArray = findMaxInArray([1,3,5,6,2,11,3,5]);
+let maxOfArray = findMaxInArray([1, 3, 5, 6, 2, 11, 3, 5]);
 console.log(`Maximun in array [1,3,5,6,2,11,3,5] : ${maxOfArray}`);
 
 /**
@@ -18,10 +18,10 @@ console.log(`Maximun in array [1,3,5,6,2,11,3,5] : ${maxOfArray}`);
  * @param {number[]} numArray
  * @return {number} 
  */
-function findMinInArray(numArray){
+function findMinInArray(numArray) {
     return Math.min(...numArray);
 }
-let minOfArray = findMinInArray([1,3,5,6,2,11,3,5]);
+let minOfArray = findMinInArray([1, 3, 5, 6, 2, 11, 3, 5]);
 console.log(`Minimun in array [1,3,5,6,2,11,3,5] : ${minOfArray}`);
 
 /**
@@ -32,14 +32,14 @@ console.log(`Minimun in array [1,3,5,6,2,11,3,5] : ${minOfArray}`);
  * @param {number[]} numArr2  
  * @return {boolean}
  */
-function compareArrays(numArr1, numArr2){
+function compareArrays(numArr1, numArr2) {
     return JSON.stringify(numArr1) == JSON.stringify(numArr2)
 }
 
-let ifArraysAreEqual1 = compareArrays([1,2,3],[1,2,3])
+let ifArraysAreEqual1 = compareArrays([1, 2, 3], [1, 2, 3])
 console.log(`Are arrays equal ? ${ifArraysAreEqual1}`)
 
-let ifArraysAreEqual2 = compareArrays([1,2,4],[1,2,3])
+let ifArraysAreEqual2 = compareArrays([1, 2, 4], [1, 2, 3])
 console.log(`Are arrays equal ? ${ifArraysAreEqual2}`)
 
 /**
@@ -48,11 +48,11 @@ console.log(`Are arrays equal ? ${ifArraysAreEqual2}`)
  * @param {string[]} stringArr
  * @param {number[]} numArr
  */
-function reverseArray(stringArr, numArr){
+function reverseArray(stringArr, numArr) {
     console.log(stringArr.reverse());
     console.log(numArr.reverse());
 }
-let checkReverse = reverseArray(["i","am","sky"],[1,2,3,4,5]); 
+let checkReverse = reverseArray(["i", "am", "sky"], [1, 2, 3, 4, 5]);
 
 /**
  * Sort an array on the basis of length of its elements
@@ -61,25 +61,31 @@ let checkReverse = reverseArray(["i","am","sky"],[1,2,3,4,5]);
  * @param {string[]} stringArr
  * @return {string[]}
  */
-function sortArrayOnLengthOfElements(stringArr){
-    return stringArr.sort((a,b)=>a.length-b.length)
+function sortArrayOnLengthOfElements(stringArr) {
+    return stringArr.sort((a, b) => a.length - b.length)
 }
-let sortedArr = sortArrayOnLengthOfElements(["elephant","dog","abc","a","is"]);
-console.log('sortedArr:::',sortedArr);
+let sortedArr = sortArrayOnLengthOfElements(["elephant", "dog", "abc", "a", "is"]);
+console.log('sortedArr:::', sortedArr);
 
 /**
  * Sort a string array into lexicpgraphic order
  * @param {string[]} wordArr 
  * @return {string[]}
  */
-function sortArrayLexicographically(wordArr){
-    return wordArr.sort((a,b)=>a.toLowerCase().localeCompare(b.toLowerCase()))
+function sortArrayLexicographically(wordArr) {
+    return wordArr.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
 }
-const lexicoGraphicallySortedWordArr = sortArrayLexicographically(["abc","aa","dog","zty","abaca"]);
-console.log("lexicographocally sorted word array: ",lexicoGraphicallySortedWordArr);
+const lexicoGraphicallySortedWordArr = sortArrayLexicographically(["abc", "aa", "dog", "zty", "abaca"]);
+console.log("lexicographocally sorted word array: ", lexicoGraphicallySortedWordArr);
 
-function sortAlphanumericArrayLexicographically(alphaNumArr){
-    return alphaNumArr.sort((a,b)=>a.toLowerCase().localeCompare(b.toLowerCase(),'en',{numeric:true}));
+/**
+ * Sort an alphanumeric array using sort and localeCompare method with flag {numeric:true}
+ * the localeCompareMethod takes 3 argumets- string (to compare with), language - 'en', numeric - {numeric :true} 
+ * this numeric flag allows comparision of numbers as well
+ * @param {string[]} alphaNumArr 
+ */
+function sortAlphanumericArrayLexicographically(alphaNumArr) {
+    return alphaNumArr.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase(), 'en', { numeric: true }));
 }
-const lexicoGraphicallySortedAlphanumericArr = sortAlphanumericArrayLexicographically(["a1","1a","b1","0b"]);
-console.log('lexicographocally sorted alphanumeric array:',lexicoGraphicallySortedAlphanumericArr);
+const lexicoGraphicallySortedAlphanumericArr = sortAlphanumericArrayLexicographically(["a1", "1a", "b1", "0b"]);
+console.log('lexicographocally sorted alphanumeric array:', lexicoGraphicallySortedAlphanumericArr);

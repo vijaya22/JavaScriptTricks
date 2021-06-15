@@ -89,3 +89,21 @@ function sortAlphanumericArrayLexicographically(alphaNumArr) {
 }
 const lexicoGraphicallySortedAlphanumericArr = sortAlphanumericArrayLexicographically(["a1", "1a", "b1", "0b"]);
 console.log('lexicographocally sorted alphanumeric array:', lexicoGraphicallySortedAlphanumericArr);
+
+/**
+ * sort a number array on the basis of length of elements
+ * @param {number[]} numberArr
+ */
+function sortNumberArray(numberArr){
+    return numberArr.sort((a,b)=>a.length-b.length);
+}
+const sortedArray = sortNumberArray([]);
+console.log('xx::',sortedArray)
+
+/**
+ *  convert a number into number array
+ * @param {number} num
+ */ 
+function giveNumArray(num){
+    return num.toString().split('').map(Number);
+}

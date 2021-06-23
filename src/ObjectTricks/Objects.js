@@ -35,3 +35,25 @@ console.log('cloned address::::', cloneAddress);
 
 let clonedAddress2 = JSON.parse(JSON.stringify(address));
 console.log('cloned by JSON method::', clonedAddress2);
+
+/** 
+ * Objects are truthy in if()
+ */
+let userObj = {
+    name: 'John'
+}
+if (userObj) {
+    console.log('objects are always truthy.')
+}
+
+/**
+ * To iterate over the properties(keys) present in an object
+ * we can use for...in loop
+ */
+let tvAd = {
+    airDate: new Date(12 / 5 / 2021),
+    company: 'Abc'
+}
+for (prop in tvAd) {
+    console.log(`${prop} : ${tvAd[prop]}`);
+}

@@ -1,4 +1,3 @@
-const { add } = require('lodash');
 var lodash = require('lodash');
 /* Object Tricks - */
 
@@ -57,3 +56,30 @@ let tvAd = {
 for (prop in tvAd) {
     console.log(`${prop} : ${tvAd[prop]}`);
 }
+
+/**
+ * We can't use another object as a key in objects
+ */
+
+/**
+ * Object.entries() returns the array of key/value pairs from an object.
+ * For eg- let desciption = {
+ *     name:'John',
+ *     age:30
+ * }
+ * Object.entries(description) = [['name','John'],['age',30]]
+ */
+
+/**
+ * Object.fromEntries() creates a object from an array of key value pairs
+ */
+
+ /**
+  * Use invert function from lodash to invert key:value in objects
+  */
+let obj = {
+    name : 'sri',
+    age:31
+}
+const invertedObj = lodash.invert(obj);
+console.log('x::',invertedObj);

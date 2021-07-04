@@ -135,6 +135,9 @@ class LinkedList {
         prevNode.next = nextNode;
     }
 
+    /**
+     * printAllNodeValues() - prints the linked list node values in form "a -> b".
+     */
     printAllNodeValues() {
         let node = this.head;
         let result = "";
